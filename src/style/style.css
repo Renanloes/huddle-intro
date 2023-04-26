@@ -1,0 +1,148 @@
+body{
+    display: grid;
+    grid-template-areas: "header"
+                         "section" 
+                         "footer";
+    grid-template-columns: repeat(1, 1fr);
+    background: url(/src/images/bg-desktop.svg);
+    background-color:  hsl(257, 40%, 49%);
+}
+
+
+.header{
+    grid-area: header;
+    margin: 25px 60px ;
+}
+
+.section{
+    grid-area: section;
+    display: flex;
+    grid-column-gap: 4%;
+}
+
+.section img{
+    margin: 70px auto auto 60px;
+}
+
+.description{
+    font-family: var(--restante);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-right: 7%;
+    margin-top: 8%;
+}
+
+.description h2{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.description p{
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 30px;
+    line-height: 25px;
+}
+
+.description .btn a{
+    display: flex;
+    justify-content: center;
+    color:  hsl(257, 40%, 49%);
+    font-weight: 600;
+    background-color:white;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 20px;
+    width: 220px;
+    border-radius: 100px;
+}
+
+.description .btn a:hover{
+    color: white;
+    background-color: var(--fundo);
+    transition: 0.2s ease-out;
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+
+}
+
+.social{
+    display: flex;
+    margin-right: 90px;
+}
+
+.footer a{
+    padding: 15px;
+    color: white;
+    margin: 7px;
+}
+
+.footer a:hover{
+    color: var(--fundo);
+}
+
+@media (max-width: 376px){
+    body{
+        background: url(/src/images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-color:   hsl(257, 40%, 49%);
+        max-width: 375px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header{
+        margin: 30px auto auto 40px ;
+    }
+
+    .header img{
+        width: 120px;
+    }
+
+    .section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section img{
+        margin: 65px auto auto 45px;
+        width: 300px;
+    }
+
+    .description{
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .description h2{
+        font-size: 22px;
+        line-height: 35px;
+    }
+
+    .description p{
+        font-size: 15px;
+        width: 275px;
+    }
+
+    .description .btn{
+        margin-top: 20px;
+    }
+
+    .social{
+        display: flex;
+        align-items: center;
+        margin: auto;
+    }
+
+    .social a{
+        margin: 0;
+    }
+}
